@@ -57,6 +57,9 @@ class BinarySearchTree {
    * @returns {number} The smallest integer from this tree.
    */
   min(current = this.root) {
+    if (this.isEmpty) {
+      return null;
+    }
     while (current.left) {
       current = current.left;
     }
@@ -84,6 +87,9 @@ class BinarySearchTree {
    * @returns {number} The largest integer from this tree.
    */
   max(current = this.root) {
+    if (this.isEmpty) {
+      return null;
+    }
     while (current.right) {
       current = current.right;
     }
